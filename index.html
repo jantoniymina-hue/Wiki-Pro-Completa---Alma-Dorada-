@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMA DORADA | Wiki del Clan</title>
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1020;color:#e5e7eb}
+    header{background:linear-gradient(135deg,#020617,#1e293b);padding:40px 20px;text-align:center}
+    header h1{margin:0;color:#facc15;font-size:42px;letter-spacing:2px}
+    header p{margin:10px 0 0;color:#cbd5f5}
+    nav{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;justify-content:center;gap:15px;background:#020617;padding:12px;border-bottom:1px solid #1e293b}
+    nav a{color:#38bdf8;text-decoration:none;font-weight:bold}
+    nav a:hover{color:#facc15}
+    section{max-width:1300px;margin:auto;padding:40px 20px}
+    h2{color:#facc15;border-bottom:2px solid #1e293b;padding-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:25px}
+    .card{background:#020617;border-radius:18px;padding:18px;box-shadow:0 15px 30px rgba(0,0,0,.5)}
+    .card h3{margin:0 0 8px;color:#38bdf8}
+    .tag{display:inline-block;background:#1e293b;padding:4px 10px;border-radius:999px;font-size:12px;margin:4px 4px 0 0}
+    .tierS{border:2px solid #facc15}
+    .tierA{border:2px solid #38bdf8}
+    .tierB{border:2px solid #64748b}
+    .note{background:#020617;border-left:4px solid #facc15;padding:15px;margin-top:20px;border-radius:10px}
+    footer{text-align:center;background:#020617;padding:20px;color:#94a3b8;font-size:14px}
+    input{width:100%;max-width:400px;padding:12px;border-radius:12px;border:none;margin:20px auto;display:block}
+  </style>
+  <script>
+    function buscar(){
+      let input=document.getElementById('buscar').value.toLowerCase();
+      let cards=document.getElementsByClassName('card');
+      for(let i=0;i<cards.length;i++){
+        let txt=cards[i].innerText.toLowerCase();
+        cards[i].style.display=txt.includes(input)?'block':'none';
+      }
+    }
+  </script>
+</head>
+<body><header>
+  <h1>ALMA DORADA</h1>
+  <p>Wiki Oficial del Clan · Saint Seiya: Legends of Justice</p>
+  <p><strong>Líder del Clan:</strong> Raúl</p>
+</header><nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#bronce">Bronce</a>
+  <a href="#plata">Plata</a>
+  <a href="#oro">Oro</a>
+  <a href="#dioses">Dioses</a>
+  <a href="#tier">Tier List</a>
+  <a href="#nuevos">Guía Nuevos</a>
+</nav><section id="inicio">
+  <h2>📖 Bienvenido a la Wiki del Clan</h2>
+  <p>Esta página fue creada para guiar a los nuevos miembros del clan <strong>ALMA DORADA</strong>. Aquí encontrarás personajes, recomendaciones y prioridades de subida.</p>
+  <input id="buscar" onkeyup="buscar()" placeholder="🔍 Buscar personaje...">
+</section><section id="bronce">
+  <h2>🟤 Caballeros de Bronce</h2>
+  <div class="grid">
+    <div class="card tierA"><h3>Seiya de Pegaso</h3><span class="tag">DPS</span><span class="tag">Luz</span><p>Excelente inicio de juego.</p></div>
+    <div class="card tierA"><h3>Ikki de Fénix</h3><span class="tag">DPS</span><span class="tag">Fuego</span><p>Resurrección clave.</p></div>
+    <div class="card tierB"><h3>Shiryu de Dragón</h3><span class="tag">Tanque</span><span class="tag">Tierra</span></div>
+  </div>
+</section><section id="plata">
+  <h2>⚪ Caballeros de Plata</h2>
+  <div class="grid">
+    <div class="card tierA"><h3>Marin del Águila</h3><span class="tag">Soporte</span></div>
+    <div class="card tierB"><h3>Shaina de Ofiuco</h3><span class="tag">DPS</span></div>
+  </div>
+</section><section id="oro">
+  <h2>🟡 Caballeros Dorados</h2>
+  <div class="grid">
+    <div class="card tierS"><h3>Saga de Géminis</h3><span class="tag">DPS</span></div>
+    <div class="card tierS"><h3>Shaka de Virgo</h3><span class="tag">Control</span></div>
+    <div class="card tierA"><h3>Mu de Aries</h3><span class="tag">Soporte</span></div>
+  </div>
+</section><section id="dioses">
+  <h2>🔴 Dioses</h2>
+  <div class="grid">
+    <div class="card tierS"><h3>Hades</h3><span class="tag">DPS</span></div>
+    <div class="card tierS"><h3>Atenea</h3><span class="tag">Soporte</span></div>
+  </div>
+</section><section id="tier">
+  <h2>🏆 Tier List del Clan</h2>
+  <div class="note">
+    <p><strong>S:</strong> Prioridad máxima · <strong>A:</strong> Muy recomendados · <strong>B:</strong> Situacionales</p>
+  </div>
+</section><section id="nuevos">
+  <h2>🧭 Guía para Nuevos</h2>
+  <ul>
+    <li>Prioriza 1 DPS fuerte y 1 soporte.</li>
+    <li>No gastes recursos en muchos personajes a la vez.</li>
+    <li>Sigue la Tier List del clan.</li>
+  </ul>
+</section><footer>
+  Wiki PRO del clan <strong>ALMA DORADA</strong> · Líder: Raúl · Saint Seiya Legends of Justice
+</footer></body>
+  </html>
